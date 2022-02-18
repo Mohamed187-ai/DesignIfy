@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
-import { HeroSection, Heading, HeroText, ButtonContainer, HeroButton, ImageCharacter, HeroImage, HeroContent, ButtonWrapper, CharacterContainer, } from './HeroStyles';
+import { HeroSection, Heading, HeroText, ButtonContainer, HeroButton, ImageCharacter, HeroImage, HeroContent, ButtonWrapper, } from './HeroStyles';
 import { useInView } from 'react-intersection-observer';
 import Modal from '../Modal/Modal';
 
@@ -40,26 +40,30 @@ const Hero = () => {
 			<HeroSection id="hero">
 				<HeroImage className="pattern" src="./images/hero-pattern-bg-lg.png" />
 				<HeroImage className="guy" src="./images/hero-guy-1.png" />
-				<CharacterContainer>
-					<ImageCharacter
-						dragConstraints={dragConstraints}
-						className="one"
-						src="./images/image-1.png"
-					/>
-					<ImageCharacter
-						dragConstraints={dragConstraints}
-						className="two"
-						src="./images/image-2.png"
-					/>
-					<ImageCharacter
-						variants={variants}
-						whileHover="hover"
-						drag
-						dragConstraints={dragConstraints}
-						className="three"
-						src="./images/image-3.png"
-					/>
-				</CharacterContainer>
+				<ImageCharacter
+					variants={variants}
+					whileHover="hover"
+					drag
+					dragConstraints={dragConstraints}
+					className="one"
+					src="./images/image-1.png"
+				/>
+				<ImageCharacter
+					variants={variants}
+					whileHover="hover"
+					drag
+					dragConstraints={dragConstraints}
+					className="two"
+					src="./images/image-2.png"
+				/>
+				<ImageCharacter
+					variants={variants}
+					whileHover="hover"
+					drag
+					dragConstraints={dragConstraints}
+					className="three"
+					src="./images/image-3.png"
+				/>
 				<HeroContent>
 					<Heading>We Are Designify</Heading>
 					<HeroText>
